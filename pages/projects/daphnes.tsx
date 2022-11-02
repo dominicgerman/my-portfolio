@@ -11,11 +11,11 @@ export default function Daphnes() {
         <title>Projects | Daphnes</title>
       </Head>
 
-      <h1 className={utilStyles.heading}>Daphne's</h1>
+      <h1 className={utilStyles.heading}>Daphne&apos;s</h1>
       <section className={utilStyles.about}>
         <div className={utilStyles.content}>
           <p>
-            Daphne's{' '}
+            Daphne&apos;s{' '}
             <Link
               href="https://daphnes.bar"
               className={utilStyles.link}
@@ -33,8 +33,8 @@ export default function Daphnes() {
             After I learned how to use Javascript, I made a single page app out
             of vanilla JS that could consume data from an API. My wife designed
             the site for me in Figma and I used those files to create the UI. I
-            didn't want to use a third-party API so I learned how to create one
-            using Node, Express and MongoDB with Mongoose.
+            didn&apos;t want to use a third-party API so I learned how to create
+            one using Node, Express and MongoDB with Mongoose.
           </p>
 
           <p>
