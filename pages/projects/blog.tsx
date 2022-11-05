@@ -13,35 +13,24 @@ export default function Blog() {
       <h1 className={utilStyles.heading}>Blog app</h1>
       <section className={utilStyles.about}>
         <div className={utilStyles.content}>
+          <p></p>
           <p>
-            This is a blog app I built it with React and Redux. In the{' '}
-            <Link
-              href="https://fullstackopen.com/en/"
-              target="_blank"
-              className={utilStyles.link}
-            >
-              Full Stack Open
-            </Link>{' '}
-            online web development course, the final problem set involves
-            refactoring an exisiting codebase, adding multiple features, and
-            adding styles.
-          </p>
-
-          <p>
-            I implemented Redux as a state management solution, incorporated
-            Tailwind for styling, and used React Router for navigation. I also
-            created separate views for individual blog posts and users, and I
-            implemented a comments section.
+            I converted the state management setup from useState to Redux, I
+            incorporated Material UI for some rudimentary styling, and I used
+            React Router for navigation. I also created separate views for
+            individual blog posts and a view for listing all users.
           </p>
           <p>
-            Many of these tasks were tedious but they were ultimately incredibly
-            educational. I went with Tailwind in these exercises because it was
-            new to me.
+            Some of these tasks were tedious but they were also incredibly
+            educational. I'll be adding a comments section and more styling in
+            the near future. I went with Material UI in these exercises because
+            it was new to me and because I wanted experience working with a
+            library of premade UI components.
           </p>
           <p></p>
 
           <Link
-            href="https://github.com/dominicgerman/blog-app"
+            href="https://github.com/dominicgerman/fullstackopen/tree/main/part7/blog-list"
             target="_blank"
           >
             <button className={utilStyles.buttonLarge}>Source code</button>

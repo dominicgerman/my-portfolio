@@ -106,7 +106,8 @@ export default function ProjectsList({ home }: { home?: boolean }) {
             <div className={`${styles.techItems} ${styles.small}`}>
               <p>React</p>
               <p>Redux</p>
-              <p>Tailwind</p>
+              <p>Material UI</p>
+              <p>Express</p>
             </div>
             <div className={styles.projectLinks}>
               <Link href="/projects/blog">
