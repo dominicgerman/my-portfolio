@@ -30,7 +30,9 @@ export default function Layout({
         <Link href="/resume.pdf" target="_blank">
           Resume
         </Link>
-        <Link href="/contact">Contact</Link>
+        <Link className={styles.contactLink} href="/contact">
+          Contact
+        </Link>
       </header>
       <main>{children}</main>
       {!home && (

@@ -33,3 +33,38 @@
 .backToHome {
   margin: 3rem 0 3rem;
 }
+
+@media (max-width: 50em) {
+  .container {
+    padding: 4rem 4rem;
+  }
+
+  .nav {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 40em) {
+  .nav {
+    gap: 3rem;
+  }
+
+  .homeBtn {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .contactLink {
+    display: none;
+  }
+}
+
+@media (max-width: 25em) {
+  .container {
+    padding: 2rem 2rem;
+  }
+
+  .nav {
+    gap: 2rem;
+  }
+}

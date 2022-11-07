@@ -62,6 +62,7 @@ export default function Daphnes() {
             alt="daphnes website screenshot"
             width={400}
             height={400}
+            className={utilStyles.img}
           />
           <Link
             href="https://github.com/dominicgerman/daphnes_fullstack"

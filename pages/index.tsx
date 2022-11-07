@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
 
       <section className={styles.welcome}>
-        <div>
+        <div className={utilStyles.flex}>
           <h1 className={styles.welcomeMsg}>👋🏻</h1>
           <h1 className={styles.welcomeMsg}>
             Hi, I’m Dominic. I am a self-taught web developer living in Chicago.

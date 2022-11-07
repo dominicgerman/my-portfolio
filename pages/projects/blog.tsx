@@ -51,6 +51,7 @@ export default function Blog() {
           alt="nextJS logo"
           width="400"
           height="400"
+          className={utilStyles.img}
         ></img>
       </section>
       <h3 style={{ marginTop: '3rem' }}>
