@@ -13,29 +13,35 @@ export default function Blog() {
       <h1 className={utilStyles.heading}>Blog app</h1>
       <section className={utilStyles.about}>
         <div className={utilStyles.content}>
-          <p></p>
           <p>
-            I converted the state management setup from useState to Redux, I
-            incorporated Material UI for some rudimentary styling, and I used
-            React Router for navigation. I also created separate views for
-            individual blog posts and a view for listing all users.
+            This is a very simple blog app that uses Redux as a state management
+            solution. The frontend was bootstrapped with create-react-app and
+            the backend is an Express server with a MongoDB database. Logged in
+            users can view a list of blogs, create new blog posts, delete posts,
+            view a list of users and like other posts.
           </p>
           <p>
-            Some of these tasks were tedious but they were also incredibly
-            educational. I'll be adding a comments section and more styling in
-            the near future. I went with Material UI in these exercises because
-            it was new to me and because I wanted experience working with a
-            library of premade UI components.
+            This project was part of the problem sets for the Full Stack Open
+            online web development course. Refactoring from useState to Redux
+            was part of the final problem set. I utilized Material UI for some
+            rudimentary styling as well as React Router for navigation.
+          </p>
+          <p>
+            I'll be adding a comments section and more styling in the near
+            future. I went with Material UI in these exercises because it was
+            new to me and because I wanted experience working with a library of
+            premade UI components. You can log in with username 'kodathedog' and
+            password 'barkbark'.
           </p>
           <p></p>
 
           <Link
-            href="https://github.com/dominicgerman/fullstackopen/tree/main/part7/blog-list"
+            href="https://github.com/dominicgerman/blog-list"
             target="_blank"
           >
             <button className={utilStyles.buttonLarge}>Source code</button>
           </Link>
-          <Link href="https://white-moon-7806.fly.dev/" target="_blank">
+          <Link href="https://spring-firefly-2293.fly.dev/" target="_blank">
             <button className={utilStyles.buttonLarge}>View site</button>
           </Link>
         </div>

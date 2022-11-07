@@ -22,11 +22,7 @@ export default function Home() {
             Hi, I’m Dominic. I am a self-taught web developer living in Chicago.
           </h1>
           <Link href="/resume.pdf" target="_blank">
-            <button
-              className={`${utilStyles.buttonLarge} ${utilStyles.btnLarge}`}
-            >
-              View resume
-            </button>
+            <button className={utilStyles.buttonLarge}>View resume</button>
           </Link>
         </div>
         <Image
@@ -42,13 +38,15 @@ export default function Home() {
           I am a professional singer turned software developer who enjoys
           building modern, clean, and accessible applications for the web.
         </p>
-        <Link
-          href="/about"
-          className={utilStyles.link}
-          style={{ marginBottom: '6rem' }}
+        <div
+          style={{
+            marginBottom: '6rem',
+          }}
         >
-          Learn more
-        </Link>
+          <Link href="/about" className={utilStyles.link}>
+            Learn more
+          </Link>
+        </div>
         <h2>Tech I like</h2>
         <div className={`${styles.techItems} ${styles.contentContainer}`}>
           <p>Javascript</p>
