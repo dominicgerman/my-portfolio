@@ -27,11 +27,11 @@ export default function Blog() {
             rudimentary styling as well as React Router for navigation.
           </p>
           <p>
-            I'll be adding a comments section and more styling in the near
+            I&apos;ll be adding a comments section and more styling in the near
             future. I went with Material UI in these exercises because it was
             new to me and because I wanted experience working with a library of
-            premade UI components. You can log in with username 'kodathedog' and
-            password 'barkbark'.
+            premade UI components. You can log in with username
+            &apos;kodathedog&apos; and password &apos;barkbark&apos;.
           </p>
           <p></p>
 
