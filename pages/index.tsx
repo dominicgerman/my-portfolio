@@ -47,25 +47,27 @@ export default function Home() {
             Learn more
           </Link>
         </div>
-        <h2>Tech I like</h2>
+        <h2>Very comfortable with</h2>
         <div className={`${styles.techItems} ${styles.contentContainer}`}>
           <p>Javascript</p>
           <p>React</p>
-          <p>NextJS</p>
-          <p>Express</p>
-          <p>Node</p>
-          <p>MongoDB</p>
-          <p>CSS</p>
           <p>HTML</p>
+          <p>CSS</p>
+          <p>Express</p>
+          <p>GraphQL</p>
+          <p>MongoDB</p>
+          <p>Git</p>
         </div>
-        <h2>Tools I like</h2>
+        <h2>Getting comfortable with</h2>
         <div className={`${styles.techItems} ${styles.contentContainer}`}>
           <p>Typescript</p>
+          <p>NextJS</p>
+          <p>Node</p>
           <p>Redux</p>
-          <p>Tailwind</p>
           <p>Jest</p>
           <p>Cypress</p>
-          <p>Git</p>
+          <p>Docker</p>
+          <p>SQL</p>
         </div>
       </section>
       <ProjectsList home />

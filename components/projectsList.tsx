@@ -61,6 +61,38 @@ export default function ProjectsList({ home }: { home?: boolean }) {
           </div>
         </li>
         <li className={styles.projectItem}>
+          <Link href="/projects/pomodoro">
+            <img
+              src="https://www.svgrepo.com/download/120941/tomato.svg"
+              alt="tomato"
+              width="212"
+              height="211"
+            ></img>
+          </Link>
+          <div className={`${styles.projectInfo} ${styles.contentContainer}`}>
+            <h3>Pomodoro timer</h3>
+            <p>
+              A pomodoro timer for increasing productivity and focus. Built with
+              CSS, React and Typescript.
+            </p>
+            <div className={`${styles.techItems} ${styles.small}`}>
+              <p>Typescript</p>
+              <p>React</p>
+              <p>CSS</p>
+              <p>Vite</p>
+            </div>
+            <div className={styles.projectLinks}>
+              <Link href="/projects/pomodoro">
+                <button
+                  className={`${utilStyles.buttonLarge} ${styles.btnSmall}`}
+                >
+                  View project
+                </button>
+              </Link>
+            </div>
+          </div>
+        </li>
+        <li className={styles.projectItem}>
           <Link href="/projects/portfolio">
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg"
@@ -101,8 +133,10 @@ export default function ProjectsList({ home }: { home?: boolean }) {
             ></img>
           </Link>
           <div className={`${styles.projectInfo} ${styles.contentContainer}`}>
-            <h3>Blog app</h3>
-            <p>A blog app built with create-react-app and Redux.</p>
+            <h3>Blog list app</h3>
+            <p>
+              A &apos;blog list&apos; app built with create-react-app and Redux.
+            </p>
             <div className={`${styles.techItems} ${styles.small}`}>
               <p>React</p>
               <p>Redux</p>

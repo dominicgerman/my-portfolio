@@ -7,18 +7,18 @@ export default function Blog() {
   return (
     <Layout>
       <Head>
-        <title>Projects | Blog</title>
+        <title>Projects | Blog list</title>
       </Head>
 
-      <h1 className={utilStyles.heading}>Blog app</h1>
+      <h1 className={utilStyles.heading}>Blog list app</h1>
       <section className={utilStyles.about}>
         <div className={utilStyles.content}>
           <p>
-            This is a very simple blog app that uses Redux as a state management
+            This is a very simple list app that uses Redux as a state management
             solution. The frontend was bootstrapped with create-react-app and
             the backend is an Express server with a MongoDB database. Logged in
-            users can view a list of blogs, create new blog posts, delete posts,
-            view a list of users and like other posts.
+            users can view a list of blogs, create new blog post items, delete
+            posts, view a list of users and like other posts.
           </p>
           <p>
             This project was part of the problem sets for the Full Stack Open
