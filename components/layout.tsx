@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from './layout.module.css'
 import Link from 'next/link'
 
@@ -21,7 +20,7 @@ export default function Layout({
           content="A portfolio site for Dominic German"
         />
       </Head>
-      <header className={styles.nav}>
+      <nav className={styles.nav}>
         <Link className={styles.homeBtn} href="/">
           DG
         </Link>
@@ -33,7 +32,7 @@ export default function Layout({
         <Link className={styles.contactLink} href="/contact">
           Contact
         </Link>
-      </header>
+      </nav>
       <main>{children}</main>
       {!home && (
         <h3 className={styles.backToHome}>
