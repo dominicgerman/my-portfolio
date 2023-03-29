@@ -1,14 +1,13 @@
 // import PocketBase from 'pocketbase'
 import Link from 'next/link'
 import Image from 'next/image'
-import '../globals.css'
 
 async function getProjects() {
   //   const db = new PocketBase('http://127.0.0.1:8090')
   //   const data = await db.collection('projects').getList(1, 10)
 
   const res = await fetch(
-    'http://127.0.0.1:8090/api/collections/projects/records?page=1&perPage=30'
+    'http://127.0.0.1:8090/api/collections/projects/records?expand=project_tools'
   )
   const data = await res.json()
 
@@ -19,7 +18,7 @@ export default async function ProjectsPage() {
   const projects = await getProjects()
   return (
     <div className="projects">
-      <h1 className="heading">Projects</h1>
+      <h2 className="heading">Projects</h2>
       <ul className="projectsList">
         {projects.map((project) => {
           return (
@@ -35,12 +34,14 @@ export default async function ProjectsPage() {
               </Link>
               <div className="projectInfo contentContainer">
                 <h3>{project.title}</h3>
-                <p>{project.shortDescription}</p>{' '}
-                <div className="techItems small">
-                  {project.tools.map((tool: string) => (
-                    <p key={project.tool}>{tool}</p>
-                  ))}
-                </div>
+                <p>{project.short_description}</p>{' '}
+                <ul className="techItems small">
+                  {project.expand.project_tools.map(
+                    (tool: { id: string; name: string }) => (
+                      <li key={tool.id}>{tool.name}</li>
+                    )
+                  )}
+                </ul>
                 <div className="projectLinks">
                   <Link href={`/projects/${project.slug}`}>
                     <button className="buttonLarge btnSmall">

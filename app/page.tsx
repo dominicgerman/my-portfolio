@@ -2,7 +2,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ProjectsPage from './projects/page'
 
-export default function HomePage() {
+async function getTools() {
+  const res = await fetch('http://127.0.0.1:8090/api/collections/tools/records')
+  const data = await res.json()
+  return data?.items as any
+}
+
+export default async function HomePage() {
+  const tools = await getTools()
+
   return (
     <>
       <section className="welcome">
@@ -37,25 +45,14 @@ export default function HomePage() {
             Learn more
           </Link>
         </div>
-        <h2>Tech and Tools</h2>
-        <div className="techItems contentContainer">
-          <span>Javascript</span>
-          <span>React</span>
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>Express</span>
-          <span>GraphQL</span>
-          <span>MongoDB</span>
-          <span>Git</span>
-          <span>Typescript</span>
-          <span>NextJS</span>
-          <span>Node</span>
-          <span>Redux</span>
-          <span>Jest</span>
-          <span>Cypress</span>
-          <span>Docker</span>
-          <span>SQL</span>
-        </div>
+      </section>
+      <section className="tools">
+        <h2>Tools 🔧</h2>
+        <ul className="techItems contentContainer">
+          {tools?.map((tool: { id: string; name: string }) => {
+            return <li key={tool.id}>{tool.name}</li>
+          })}
+        </ul>
       </section>
       {/* @ts-expect-error Server Component */}
       <ProjectsPage />

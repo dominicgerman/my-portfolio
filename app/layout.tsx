@@ -1,12 +1,10 @@
 import Link from 'next/link'
-import './globals.css'
+import '../globals.css'
 
 export default function RootLayout({
   children,
-  home,
 }: {
   children: React.ReactNode
-  home?: boolean
 }) {
   return (
     <html>
@@ -32,11 +30,10 @@ export default function RootLayout({
           </Link>
         </nav>
         <main>{children}</main>
-        {!home && (
-          <h3 className="backToHome">
-            <Link href="/">← Back to home</Link>
-          </h3>
-        )}
+
+        <h3 className="backToHome">
+          <Link href="/">← Back to home</Link>
+        </h3>
       </body>
     </html>
   )
