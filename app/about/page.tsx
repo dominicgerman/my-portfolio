@@ -11,7 +11,7 @@ export async function getPages() {
 
 export default async function AboutPage() {
   const data = await getPages()
-  const { id, heading, content } = data.filter(
+  const { heading, content } = data.filter(
     (item: { slug: string }) => item.slug === 'about'
   )[0]
 

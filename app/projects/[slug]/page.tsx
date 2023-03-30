@@ -19,7 +19,6 @@ export default async function ProjectPage({
     data.filter((item: { slug: string }) => item.slug === slug)[0]
 
   const descriptionArr = long_description.split(/\r?\n/)
-  console.log(descriptionArr)
 
   return (
     <div>

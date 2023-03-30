@@ -3,7 +3,7 @@ import { getPages } from '../about/page'
 
 export default async function ContactPage() {
   const data = await getPages()
-  const { id, heading, subheading, expand } = data.filter(
+  const { heading, subheading, expand } = data.filter(
     (item: { slug: string }) => item.slug === 'contact'
   )[0]
 

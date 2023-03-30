@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <html>
       <head>
-        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" href="favicon.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap"
           rel="stylesheet"
@@ -18,6 +18,7 @@ export default function RootLayout({
           name="description"
           content="A portfolio site for Dominic German"
         />
+        <title>Dominic German</title>
       </head>
       <body className="layout">
         <nav className="nav">

@@ -1,10 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-// import daphnes_thumb from '../../public/images/daphnes_thumb.png'
-// import headshot from '../../public/images/headshot.jpg'
-// import torie from '../../public/images/torie.jpg'
-// import tomato from '../../public/images/tomato.svg'
-// import react from '../../public/images/react.png'
 
 export async function getProjects() {
   const res = await fetch(
