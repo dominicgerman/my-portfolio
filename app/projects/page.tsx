@@ -1,11 +1,12 @@
-// import PocketBase from 'pocketbase'
 import Link from 'next/link'
 import Image from 'next/image'
+// import daphnes_thumb from '../../public/images/daphnes_thumb.png'
+// import headshot from '../../public/images/headshot.jpg'
+// import torie from '../../public/images/torie.jpg'
+// import tomato from '../../public/images/tomato.svg'
+// import react from '../../public/images/react.png'
 
-async function getProjects() {
-  //   const db = new PocketBase('http://127.0.0.1:8090')
-  //   const data = await db.collection('projects').getList(1, 10)
-
+export async function getProjects() {
   const res = await fetch(
     'http://127.0.0.1:8090/api/collections/projects/records?expand=project_tools'
   )
@@ -14,8 +15,9 @@ async function getProjects() {
   return data?.items as any[]
 }
 
-export default async function ProjectsPage() {
+export default async function ProjectsPage({ home }: { home: boolean }) {
   const projects = await getProjects()
+
   return (
     <div className="projects">
       <h2 className="heading">Projects</h2>
@@ -25,7 +27,7 @@ export default async function ProjectsPage() {
             <li key={project.id} className="projectItem">
               <Link href={`/projects/${project.slug}`}>
                 <Image
-                  src="https://www.svgrepo.com/download/120941/tomato.svg"
+                  src={`http://localhost:8090/api/files/projects/${project.id}/${project.thumbnail}`}
                   alt={project.slug}
                   width={212}
                   height={211}
@@ -54,6 +56,11 @@ export default async function ProjectsPage() {
           )
         })}
       </ul>
+      {!home ? (
+        <h3 className="backToHome">
+          <Link href="/">← Back to home</Link>
+        </h3>
+      ) : null}
     </div>
   )
 }

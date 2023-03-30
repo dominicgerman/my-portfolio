@@ -10,6 +10,10 @@ export default function RootLayout({
     <html>
       <head>
         <link rel="icon" href="favicon.ico" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap"
+          rel="stylesheet"
+        />
         <meta
           name="description"
           content="A portfolio site for Dominic German"
@@ -30,10 +34,6 @@ export default function RootLayout({
           </Link>
         </nav>
         <main>{children}</main>
-
-        <h3 className="backToHome">
-          <Link href="/">← Back to home</Link>
-        </h3>
       </body>
     </html>
   )

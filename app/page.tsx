@@ -55,7 +55,7 @@ export default async function HomePage() {
         </ul>
       </section>
       {/* @ts-expect-error Server Component */}
-      <ProjectsPage />
+      <ProjectsPage home />
       <section className="contactMe contentContainer">
         <h2>Contact me</h2>
         <p>
