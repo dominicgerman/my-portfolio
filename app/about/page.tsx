@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export async function getPages() {
+async function getPages() {
   const res = await fetch(
     'https://twilight-sunset-5469.fly.dev/api/collections/pages/records?expand=page_links'
   )
