@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function getPages() {
   const res = await fetch(
-    'http://127.0.0.1:8090/api/collections/pages/records?expand=page_links'
+    'https://twilight-sunset-5469.fly.dev/api/collections/pages/records?expand=page_links'
   )
   const data = await res.json()
   return data?.items as any

@@ -5,7 +5,7 @@ import { getProjects } from '../page'
 export async function generateStaticParams() {
   const projects = await getProjects()
 
-  return projects.map((project) => ({ slug: project.slug }))
+  return projects?.map((project) => ({ slug: project.slug }))
 }
 
 export default async function ProjectPage({
@@ -16,9 +16,13 @@ export default async function ProjectPage({
   const { slug } = params
   const data = await getProjects()
   const { title, long_description, source_code, live_site, id, image } =
-    data.filter((item: { slug: string }) => item.slug === slug)[0]
+    data?.filter((item: { slug: string }) => item.slug === slug)[0]
 
-  const descriptionArr = long_description.split(/\r?\n/)
+  const descriptionArr = long_description?.split(/\r?\n/)
+
+  if (!data) {
+    return <h2>Loading...</h2>
+  }
 
   return (
     <div>
@@ -42,7 +46,7 @@ export default async function ProjectPage({
           </div>
         </div>
         <Image
-          src={`http://localhost:8090/api/files/projects/${id}/${image}`}
+          src={`https://twilight-sunset-5469.fly.dev/api/files/projects/${id}/${image}`}
           height={400}
           width={400}
           alt={slug}

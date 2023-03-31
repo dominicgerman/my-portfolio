@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export async function getProjects() {
   const res = await fetch(
-    'http://127.0.0.1:8090/api/collections/projects/records?expand=project_tools'
+    'https://twilight-sunset-5469.fly.dev/api/collections/projects/records?expand=project_tools'
   )
   const data = await res.json()
 
@@ -22,7 +22,7 @@ export default async function ProjectsPage({ home }: { home: boolean }) {
             <li key={project.id} className="projectItem">
               <Link href={`/projects/${project.slug}`}>
                 <Image
-                  src={`http://localhost:8090/api/files/projects/${project.id}/${project.thumbnail}`}
+                  src={`https://twilight-sunset-5469.fly.dev/api/files/projects/${project.id}/${project.image}`}
                   alt={project.slug}
                   width={212}
                   height={211}

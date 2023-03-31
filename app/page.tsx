@@ -3,7 +3,9 @@ import Link from 'next/link'
 import ProjectsPage from './projects/page'
 
 async function getTools() {
-  const res = await fetch('http://127.0.0.1:8090/api/collections/tools/records')
+  const res = await fetch(
+    'https://twilight-sunset-5469.fly.dev/api/collections/tools/records'
+  )
   const data = await res.json()
   return data?.items as any
 }

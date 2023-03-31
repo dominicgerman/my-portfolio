@@ -2,7 +2,7 @@
 const nextConfig = {
   experimental: { appDir: true },
   images: {
-    domains: ['localhost'],
+    domains: ['localhost', 'twilight-sunset-5469.fly.dev'],
   },
   reactStrictMode: true,
   swcMinify: true,
