@@ -13,14 +13,14 @@ async function getProjects() {
 export async function generateStaticParams() {
   const projects = await getProjects()
 
-  return projects?.map((project) => ({ slug: project.slug }))
+  return projects.map((project) => ({ slug: project.slug }))
 }
 
-export default async function ProjectPage({
-  params,
-}: {
+type Props = {
   params: { slug: string }
-}) {
+}
+
+export default async function ProjectPage({ params }: Props) {
   const { slug } = params
   const data = await getProjects()
   const { title, long_description, source_code, live_site, id, image } =

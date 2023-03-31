@@ -10,7 +10,7 @@ async function getProjects() {
   return data?.items as any[]
 }
 
-export default async function ProjectsPage({ home }: { home: boolean }) {
+export default async function ProjectsPage() {
   const projects = await getProjects()
 
   return (
@@ -51,11 +51,9 @@ export default async function ProjectsPage({ home }: { home: boolean }) {
           )
         })}
       </ul>
-      {!home ? (
-        <h3 className="backToHome">
-          <Link href="/">← Back to home</Link>
-        </h3>
-      ) : null}
+      <h3 className="backToHome">
+        <Link href="/">← Back to home</Link>
+      </h3>
     </div>
   )
 }

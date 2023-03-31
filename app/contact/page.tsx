@@ -1,5 +1,12 @@
 import Link from 'next/link'
-import { getPages } from '../about/page'
+
+async function getPages() {
+  const res = await fetch(
+    'https://twilight-sunset-5469.fly.dev/api/collections/pages/records?expand=page_links'
+  )
+  const data = await res.json()
+  return data?.items as any
+}
 
 export default async function ContactPage() {
   const data = await getPages()

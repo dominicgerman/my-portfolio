@@ -1,6 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import ProjectsPage from './projects/page'
+
+async function getProjects() {
+  const res = await fetch(
+    'https://twilight-sunset-5469.fly.dev/api/collections/projects/records?expand=project_tools'
+  )
+  const data = await res.json()
+
+  return data?.items as any[]
+}
 
 async function getTools() {
   const res = await fetch(
@@ -12,6 +20,7 @@ async function getTools() {
 
 export default async function HomePage() {
   const tools = await getTools()
+  const projects = await getProjects()
 
   return (
     <>
@@ -32,6 +41,8 @@ export default async function HomePage() {
           height={211}
         ></Image>
       </section>
+
+      {/* ////////////////// ABOUT ////////////////// */}
       <section className="about">
         <h2>About me</h2>
         <p>
@@ -48,6 +59,9 @@ export default async function HomePage() {
           </Link>
         </div>
       </section>
+
+      {/* ////////////////// TOOLS ////////////////// */}
+
       <section className="tools">
         <h2>Tools 🔧</h2>
         <ul className="techItems contentContainer">
@@ -56,8 +70,50 @@ export default async function HomePage() {
           })}
         </ul>
       </section>
-      {/* @ts-expect-error Server Component */}
-      <ProjectsPage home />
+
+      {/* ////////////////// PROJECTS ////////////////// */}
+
+      <div className="projects">
+        <h2 className="heading">Projects</h2>
+        <ul className="projectsList">
+          {projects.map((project) => {
+            return (
+              <li key={project.id} className="projectItem">
+                <Link href={`/projects/${project.slug}`}>
+                  <Image
+                    src={`https://twilight-sunset-5469.fly.dev/api/files/projects/${project.id}/${project.image}`}
+                    alt={project.slug}
+                    width={212}
+                    height={211}
+                    className="borderRadius"
+                  ></Image>
+                </Link>
+                <div className="projectInfo contentContainer">
+                  <h3>{project.title}</h3>
+                  <p>{project.short_description}</p>{' '}
+                  <ul className="techItems small">
+                    {project.expand.project_tools.map(
+                      (tool: { id: string; name: string }) => (
+                        <li key={tool.id}>{tool.name}</li>
+                      )
+                    )}
+                  </ul>
+                  <div className="projectLinks">
+                    <Link href={`/projects/${project.slug}`}>
+                      <button className="buttonLarge btnSmall">
+                        View project
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+
+      {/* ////////////////// CONTACT ////////////////// */}
+
       <section className="contactMe contentContainer">
         <h2>Contact me</h2>
         <p>
