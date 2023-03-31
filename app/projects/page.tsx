@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-export async function getProjects() {
+async function getProjects() {
   const res = await fetch(
     'https://twilight-sunset-5469.fly.dev/api/collections/projects/records?expand=project_tools'
   )

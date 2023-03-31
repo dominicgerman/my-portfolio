@@ -1,6 +1,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { getProjects } from '../page'
+
+async function getProjects() {
+  const res = await fetch(
+    'https://twilight-sunset-5469.fly.dev/api/collections/projects/records?expand=project_tools'
+  )
+  const data = await res.json()
+
+  return data?.items as any[]
+}
 
 export async function generateStaticParams() {
   const projects = await getProjects()
@@ -19,10 +27,6 @@ export default async function ProjectPage({
     data?.filter((item: { slug: string }) => item.slug === slug)[0]
 
   const descriptionArr = long_description?.split(/\r?\n/)
-
-  if (!data) {
-    return <h2>Loading...</h2>
-  }
 
   return (
     <div>
