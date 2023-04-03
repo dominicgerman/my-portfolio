@@ -311,6 +311,10 @@ h3 {
     font-size: 2.6rem;
     line-height: 3.6rem;
   }
+
+  h2 {
+    text-align: center;
+  }
 }
 
 @media (max-width: 50em) {
@@ -369,8 +373,18 @@ h3 {
 }
 
 @media (max-width: 25em) {
-  .about {
+  .heading {
+    text-align: center;
+  }
+
+  .page {
     flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
     align-items: center;
   }
 
@@ -378,8 +392,29 @@ h3 {
     align-items: center;
   }
 
+  .projects > h2 {
+    margin-bottom: 8rem;
+    text-align: center;
+  }
+
+  .projectsList {
+    gap: 12rem;
+  }
+
   .img {
     height: 200px;
     width: 200px;
+  }
+
+  .techItems {
+    text-align: center;
+  }
+
+  .welcomeMsg {
+    text-align: center;
+  }
+
+  .contactMe {
+    text-align: center;
   }
 }
