@@ -9,15 +9,20 @@ export default function RootLayout({
   return (
     <html>
       <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="description"
+          content="A portfolio site for Dominic German"
+        />
+        
         <link rel="icon" href="favicon.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap"
           rel="stylesheet"
         />
-        <meta
-          name="description"
-          content="A portfolio site for Dominic German"
-        />
+        
         <title>Dominic German</title>
       </head>
       <body className="layout">
