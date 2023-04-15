@@ -76,39 +76,43 @@ export default async function HomePage() {
       <div className="projects">
         <h2 className="heading">Projects</h2>
         <ul className="projectsList">
-          {projects.map((project) => {
-            return (
-              <li key={project.id} className="projectItem">
-                <Link href={`/projects/${project.slug}`}>
-                  <Image
-                    src={`https://twilight-sunset-5469.fly.dev/api/files/projects/${project.id}/${project.image}`}
-                    alt={project.slug}
-                    width={212}
-                    height={211}
-                    className="borderRadius"
-                  ></Image>
-                </Link>
-                <div className="projectInfo contentContainer">
-                  <h3>{project.title}</h3>
-                  <p>{project.short_description}</p>{' '}
-                  <ul className="techItems small">
-                    {project.expand.project_tools.map(
-                      (tool: { id: string; name: string }) => (
-                        <li key={tool.id}>{tool.name}</li>
-                      )
-                    )}
-                  </ul>
-                  <div className="projectLinks">
-                    <Link href={`/projects/${project.slug}`}>
-                      <button className="buttonLarge btnSmall">
-                        View project
-                      </button>
-                    </Link>
+          {projects
+            .sort(function (a, b) {
+              return a.index - b.index
+            })
+            .map((project) => {
+              return (
+                <li key={project.id} className="projectItem">
+                  <Link href={`/projects/${project.slug}`}>
+                    <Image
+                      src={`https://twilight-sunset-5469.fly.dev/api/files/projects/${project.id}/${project.image}`}
+                      alt={project.slug}
+                      width={212}
+                      height={211}
+                      className="borderRadius"
+                    ></Image>
+                  </Link>
+                  <div className="projectInfo contentContainer">
+                    <h3>{project.title}</h3>
+                    <p>{project.short_description}</p>{' '}
+                    <ul className="techItems small">
+                      {project.expand.project_tools.map(
+                        (tool: { id: string; name: string }) => (
+                          <li key={tool.id}>{tool.name}</li>
+                        )
+                      )}
+                    </ul>
+                    <div className="projectLinks">
+                      <Link href={`/projects/${project.slug}`}>
+                        <button className="buttonLarge btnSmall">
+                          View project
+                        </button>
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              </li>
-            )
-          })}
+                </li>
+              )
+            })}
         </ul>
       </div>
 
