@@ -17,7 +17,7 @@ export default function RootLayout({
           content="A portfolio site for Dominic German"
         />
 
-        <link rel="icon" href="favicon.png" />
+        <link rel="icon" href="https://dominicgerman.com/favicon.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap"
           rel="stylesheet"

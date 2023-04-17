@@ -382,6 +382,11 @@ h3 {
     align-items: center;
   }
 
+  .page img {
+    width: 100%;
+    flex-basis: content;
+  }
+
   .about {
     flex-direction: column;
     text-align: center;
