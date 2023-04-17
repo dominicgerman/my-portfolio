@@ -47,7 +47,7 @@ export default async function HomePage() {
         <h2>About me</h2>
         <p>
           I am a professional singer turned software developer who enjoys
-          building modern, clean, and accessible applications for the web.
+          building modern, accessible, and performant applications for the web.
         </p>
         <div
           style={{
