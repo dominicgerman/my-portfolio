@@ -48,6 +48,19 @@ export default async function HomePage() {
         <p>
           I am a professional singer turned software developer who enjoys
           building modern, accessible, and performant applications for the web.
+          I'm half of{' '}
+          <Link href="https://kodadesigns.dev" className="link" target="_blank">
+            Koda Designs
+          </Link>
+          , a small dev shop run by{' '}
+          <Link
+            href="https://victoriagerman.com"
+            className="link"
+            target="_blank"
+          >
+            my wife
+          </Link>{' '}
+          and I.
         </p>
         <div
           style={{
