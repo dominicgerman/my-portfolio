@@ -48,7 +48,7 @@ export default async function HomePage() {
         <p>
           I am a professional singer turned software developer who enjoys
           building modern, accessible, and performant applications for the web.
-          I'm half of{' '}
+          I’m half of{' '}
           <Link href="https://kodadesigns.dev" className="link" target="_blank">
             Koda Designs
           </Link>
