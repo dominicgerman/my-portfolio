@@ -28,7 +28,7 @@ export default async function HomePage() {
         <div className="flex">
           <h1 className="welcomeMsg">👋🏻</h1>
           <h1 className="welcomeMsg">
-            Hi, I’m Dominic. I am a self-taught web developer living in Chicago.
+            Hi, I’m Dominic. I am a freelance web developer living in Chicago.
           </h1>
           <Link href="/resume.pdf" target="_blank">
             <button className="buttonLarge">View resume</button>
