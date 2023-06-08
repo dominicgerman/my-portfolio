@@ -4,8 +4,6 @@
 
 This is my personal portfolio for displaying my work as a developer. 
 
-### Links
-
 - [Live site](https://dominicgerman.com)
 
 ### Built with
