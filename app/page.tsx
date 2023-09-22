@@ -26,12 +26,14 @@ export default async function HomePage() {
     <>
       <section className="welcome">
         <div className="flex">
-          <h1 className="welcomeMsg">👋🏻</h1>
           <h1 className="welcomeMsg">
-            Hi, I’m Dominic. I am a freelance web developer living in Chicago.
+            My name is Dominic. I write code and sing songs.
           </h1>
+          <h2 className="welcomeMsg">
+            This website is about the code I write.
+          </h2>
           <Link href="/resume.pdf" target="_blank">
-            <button className="buttonLarge">View resume</button>
+            <button className="buttonLarge">View Resume</button>
           </Link>
         </div>
         <Image
@@ -46,42 +48,18 @@ export default async function HomePage() {
       <section className="about">
         <h2>About me</h2>
         <p>
-          I am a professional singer turned software developer who enjoys
-          building modern, accessible, and performant applications for the web.
-          I’m half of{' '}
+          I am a digital content manager, web developer and professional singer.
+          I’m one half of{' '}
           <Link href="https://kodadesigns.dev" className="link" target="_blank">
             Koda Designs
           </Link>
-          , a small dev shop run by{' '}
-          <Link
-            href="https://victoriagerman.com"
-            className="link"
-            target="_blank"
-          >
-            my wife
-          </Link>{' '}
-          and I.
-        </p>
-        <div
-          style={{
-            marginBottom: '6rem',
-          }}
-        >
+          , a small business that designs and builds web solutions for other
+          small businesses.{' '}
           <Link href="/about" className="link">
             Learn more
           </Link>
-        </div>
-      </section>
-
-      {/* ////////////////// TOOLS ////////////////// */}
-
-      <section className="tools">
-        <h2>Tools 🔧</h2>
-        <ul className="techItems contentContainer">
-          {tools?.map((tool: { id: string; name: string }) => {
-            return <li key={tool.id}>{tool.name}</li>
-          })}
-        </ul>
+          .
+        </p>
       </section>
 
       {/* ////////////////// PROJECTS ////////////////// */}

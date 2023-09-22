@@ -38,11 +38,13 @@ export default async function ProjectPage({ params }: Props) {
               return <p key={el.length}>{el}</p>
             }
           })}
-          <div>
-            <Link href={source_code} target="_blank">
-              <button className="buttonLarge">Source code</button>
-            </Link>
-          </div>
+          {source_code ? (
+            <div>
+              <Link href={source_code} target="_blank">
+                <button className="buttonLarge">Source code</button>
+              </Link>
+            </div>
+          ) : null}
           <div>
             <Link href={live_site} target="_blank">
               <button className="buttonLarge">View site</button>

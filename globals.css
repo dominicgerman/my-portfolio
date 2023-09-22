@@ -85,7 +85,11 @@ h3 {
 .welcome {
   display: flex;
   align-items: center;
-  margin-bottom: 26rem;
+  margin-bottom: 20rem;
+}
+
+.welcome h2 {
+  align-self: normal;
 }
 
 .welcomeMsg {
@@ -213,7 +217,7 @@ h3 {
 .content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 5rem;
   font-weight: 400;
 }
 
@@ -306,7 +310,7 @@ h3 {
   }
 }
 
-@media (max-width: 25em) {
+@media (max-width: 35em) {
   h1 {
     font-size: 2.6rem;
     line-height: 3.6rem;
@@ -314,6 +318,11 @@ h3 {
 
   h2 {
     text-align: center;
+  }
+
+  .welcome h2 {
+    font-size: 1.8rem;
+    line-height: normal;
   }
 }
 
@@ -342,7 +351,7 @@ h3 {
   }
 }
 
-@media (max-width: 25em) {
+@media (max-width: 35em) {
   .layout {
     padding: 2rem 2rem;
   }
@@ -360,23 +369,6 @@ h3 {
   .projectLinks {
     flex-direction: column;
   }
-}
-
-@media (max-width: 25em) {
-  .welcome {
-    flex-direction: column-reverse;
-  }
-
-  .contentContainer {
-    align-items: center;
-  }
-}
-
-@media (max-width: 25em) {
-  .heading {
-    text-align: center;
-  }
-
   .page {
     flex-direction: column-reverse;
     align-items: center;
@@ -385,6 +377,23 @@ h3 {
   .page img {
     width: 100%;
     flex-basis: content;
+  }
+}
+
+@media (max-width: 35em) {
+  .welcome {
+    flex-direction: column-reverse;
+  }
+
+  .contentContainer {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 35em) {
+  .heading {
+    text-align: center;
   }
 
   .about {
