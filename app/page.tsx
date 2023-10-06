@@ -56,7 +56,7 @@ export default async function HomePage() {
           , a small business that designs and builds web solutions for other
           small businesses.{' '}
           <Link href="/about" className="link">
-            Learn more
+            Learn more about me
           </Link>
           .
         </p>
